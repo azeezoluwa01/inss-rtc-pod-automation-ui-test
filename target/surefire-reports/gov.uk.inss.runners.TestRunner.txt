@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: gov.uk.inss.runners.TestRunner
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.655 s - in gov.uk.inss.runners.TestRunner
+=======
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.782 s - in gov.uk.inss.runners.TestRunner
+>>>>>>> cf6425264699513621c73f4a89a16d2eb52837ac

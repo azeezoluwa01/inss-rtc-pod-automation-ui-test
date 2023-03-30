@@ -1,5 +1,6 @@
 package gov.uk.inss.pages.one_login.home;
 
+<<<<<<< HEAD
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -20,4 +21,7 @@ public class GovUKHomePage {
         return status;
     }
 
+=======
+public class GovUKHomePage {
+>>>>>>> cf6425264699513621c73f4a89a16d2eb52837ac
 }

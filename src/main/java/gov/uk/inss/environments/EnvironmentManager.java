@@ -13,6 +13,7 @@ public class EnvironmentManager extends BasePage {
 
         switch (environmentEnum) {
             case QA:
+<<<<<<< HEAD
                 getDriver().get(qa_env);
                 break;
             case DEV:
@@ -20,6 +21,15 @@ public class EnvironmentManager extends BasePage {
                 break;
             case PREPROD:
                 getDriver().get(preprod_env);
+=======
+                driver.get(qa_env);
+                break;
+            case DEV:
+                driver.get(dev_env);
+                break;
+            case PREPROD:
+                driver.get(preprod_env);
+>>>>>>> cf6425264699513621c73f4a89a16d2eb52837ac
                 break;
             default:
                 LOGGER.error("no environment found!");
