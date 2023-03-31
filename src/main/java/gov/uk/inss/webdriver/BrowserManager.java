@@ -10,10 +10,14 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.IOException;
+
 public class BrowserManager extends BasePage {
     protected static final Logger LOGGER = LoggerFactory.getLogger("BrowserManager.class");
+    public ChromeOptions chromeOptions = null;
+    BrowserEnum browserEnum = BrowserEnum.valueOf(browserName.toUpperCase());
     public void getBrowserType() {
-        BrowserEnum browserEnum = BrowserEnum.valueOf(browserName.toUpperCase());
+//        BrowserEnum browserEnum = BrowserEnum.valueOf(browserName.toUpperCase());
         BrowserManager chromeBrowserOption = new BrowserManager();
         BrowserManager edgeBrowserOption = new BrowserManager();
         BrowserManager firefoxBrowserOption = new BrowserManager();
@@ -35,7 +39,7 @@ public class BrowserManager extends BasePage {
     }
 
     public ChromeOptions setChromeOptions() {
-        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("start-maximized");
         chromeOptions.addArguments("--remote-allow-origins=*");
         chromeOptions.setHeadless(false);
@@ -53,6 +57,29 @@ public class BrowserManager extends BasePage {
         FirefoxOptions firefoxOptions = new FirefoxOptions();
         firefoxOptions.setHeadless(false);
         return firefoxOptions;
+    }
+
+    public void endLocalBrowserProcessesInTaskManager() throws IOException {
+        switch (browserEnum) {
+            case CHROME:
+                runtime = Runtime.getRuntime();
+                process = runtime.exec("taskkill /F /IM chromedriver.exe");
+                process.destroy();
+                break;
+            case EDGE:
+                runtime = Runtime.getRuntime();
+                process = runtime.exec("taskkill /F /IM msedgedriver.exe");
+                process.destroy();
+                break;
+            case FIREFOX:
+                runtime = Runtime.getRuntime();
+                process = runtime.exec("taskkill /F /IM geckodriver.exe");
+                process.destroy();
+                break;
+            default:
+                LOGGER.info("To kill off browser driver executable");
+                break;
+        }
     }
 
 }

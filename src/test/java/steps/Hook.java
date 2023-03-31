@@ -2,15 +2,21 @@ package steps;
 
 import gov.uk.inss.base.BasePage;
 import gov.uk.inss.environments.EnvironmentManager;
-import gov.uk.inss.helper.HelperClass;
 import gov.uk.inss.helper.UtilsHelper;
 import gov.uk.inss.webdriver.BrowserManager;
 import gov.uk.inss.webdriver.DriverPath;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+
+import java.io.File;
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Hook extends BasePage {
 
@@ -21,7 +27,7 @@ public class Hook extends BasePage {
         browserManager.getBrowserType();
     }
 
-    public void setUpEnvironment(){
+    public void setUpEnvironment() {
         environmentManager = new EnvironmentManager();
         environmentManager.getEnvironment();
         utilsHelper = new UtilsHelper();
@@ -29,27 +35,45 @@ public class Hook extends BasePage {
     }
 
     @Before
-    public void setUp() {
+    public void setUp() throws IOException {
         initialisation();
         setUpEnvironment();
     }
 
-    @After
-    public void tearDown(Scenario scenario) {
+    //    @After
+    public void tearDown(Scenario scenario) throws IOException {
         if (scenario.isFailed()) {
             final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image.png", scenario.getName());
         }
         if (driver != null) {
+            browserManager.endLocalBrowserProcessesInTaskManager();
             driver.quit();
         }
     }
-//    @After
-    public void tearDown2(Scenario scenario){
-        if (scenario.isFailed()){
 
+    @After
+    public void tearDown2(Scenario scenario) throws IOException {
+        if (scenario.isFailed()) {
+            takeScreenshotsOfPage(scenario);
         }
-        driver.quit();
+        if (driver != null) {
+            browserManager.endLocalBrowserProcessesInTaskManager();
+            driver.quit();
+        }
+    }
+
+    public void takeScreenshotsOfPage(Scenario scenario) {
+        TakesScreenshot screenshot = (TakesScreenshot) driver;
+        File source = screenshot.getScreenshotAs(OutputType.FILE);
+        try {
+            Date date;
+            DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH-mm-ss");
+            date = new Date();
+            FileUtils.copyFile(source, new File(String.format("src/test/resources/screenshots/" + scenario.getStatus() + " " + scenario.getName() + " " + dateFormat.format(date) + ".png")));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }

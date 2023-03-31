@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = {"classpath:features"},
         glue = "steps",
-        tags = "@Regression1",
+        tags = "@Regression",
         plugin = {"pretty",
                 "json:target/RTC_POD-ui-reports/cucumber.json",
                 "rerun:target/failedscenarios.txt"},

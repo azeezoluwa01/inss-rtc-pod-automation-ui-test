@@ -7,6 +7,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -14,7 +15,7 @@ import java.util.List;
 
 public class UtilsHelper extends BasePage {
 
-    public static final int DEFAULT_WAIT_TIMEOUT = 10;
+    public static final long DEFAULT_WAIT_TIMEOUT = 10l;
     public WebElement getWebElement(String locatorType, String locatorValue) {
 
         switch (locatorType) {
@@ -100,6 +101,14 @@ public class UtilsHelper extends BasePage {
         JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
         javascriptExecutor.executeScript("arguments[0].scrollIntoView();", viewOfThisElement);
     }
+    public boolean waitForElementToBeInvisible(WebElement element){
+        return waitForElementToBeInvisible(element, DEFAULT_WAIT_TIMEOUT);
+    }
+
+    public boolean waitForElementToBeInvisible(WebElement element, long timeOutInSeconds){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(DEFAULT_WAIT_TIMEOUT));
+        return wait.until(ExpectedConditions.invisibilityOf(element));
+    }
 
     public void waitForPageLoad(){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(DEFAULT_WAIT_TIMEOUT));
@@ -121,6 +130,7 @@ public class UtilsHelper extends BasePage {
         element.sendKeys(data);
         return element;
     }
+
 
 
 }
