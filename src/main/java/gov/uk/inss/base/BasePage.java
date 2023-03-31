@@ -25,4 +25,5 @@ public class BasePage extends ConfigFileReader {
     public WebDriver getDriver() {
         return driver;
     }
+
 }

@@ -1,6 +1,10 @@
 package gov.uk.inss.pages.one_login.home;
 
+<<<<<<< HEAD
 import gov.uk.inss.base.BasePage;
+=======
+<<<<<<< HEAD
+>>>>>>> master
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -42,4 +46,7 @@ public class GovUKHomePage extends BasePage {
         return status;
     }
 
+=======
+public class GovUKHomePage {
+>>>>>>> cf6425264699513621c73f4a89a16d2eb52837ac
 }

@@ -55,5 +55,4 @@ public class BrowserManager extends BasePage {
         return firefoxOptions;
     }
 
-
 }
