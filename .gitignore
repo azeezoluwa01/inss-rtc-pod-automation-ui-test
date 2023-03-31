@@ -1,1 +1,6 @@
 /target/
+/target/RTC_POD-ui-reports/
+/target/test-classes/
+/target/maven-archiver/
+/target/maven-status/
+/target/surefire-reports/
