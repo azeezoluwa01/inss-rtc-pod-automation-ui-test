@@ -10,6 +10,9 @@ import org.junit.runner.RunWith;
         features = {"classpath:features"},
         glue = "steps",
         tags = "@Regression",
+//        plugin = {"pretty",
+//                "json:target/RTC_POD-ui-reports/cucumber.json"
+//        }
         plugin = {"pretty",
                 "json:target/RTC_POD-ui-reports/cucumber.json",
                 "rerun:target/failedscenarios.txt"}

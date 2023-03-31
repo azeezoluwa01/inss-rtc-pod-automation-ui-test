@@ -2,6 +2,8 @@ C:\Users\azolu\IdeaProjects\inss-ui-test\src\test\java\steps\one_login\signin\Si
 C:\Users\azolu\IdeaProjects\inss-ui-test\src\test\java\gov\uk\inss\pages\one_login\create_account\security\AuthenticatorApp.java
 C:\Users\azolu\IdeaProjects\inss-ui-test\src\test\java\gov\uk\inss\pages\one_login\create_account\account\GOVUKAccountSuccess.java
 C:\Users\azolu\IdeaProjects\inss-ui-test\src\test\java\steps\Hook.java
+C:\Users\azolu\IdeaProjects\inss-ui-test\src\test\java\gov\uk\inss\pageEvents\HomePageEvents.java
+C:\Users\azolu\IdeaProjects\inss-ui-test\src\test\java\gov\uk\inss\pageObjects\HomePageObjects.java
 C:\Users\azolu\IdeaProjects\inss-ui-test\src\test\java\gov\uk\inss\pages\one_login\signin\CheckYourPhone.java
 C:\Users\azolu\IdeaProjects\inss-ui-test\src\test\java\gov\uk\inss\pages\one_login\service\ServiceName.java
 C:\Users\azolu\IdeaProjects\inss-ui-test\src\test\java\gov\uk\inss\runners\TestRunner.java

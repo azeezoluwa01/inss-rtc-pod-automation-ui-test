@@ -1,11 +1,13 @@
 C:\Users\azolu\IdeaProjects\inss-ui-test\src\main\java\gov\uk\inss\config\TestConfig.java
-C:\Users\azolu\IdeaProjects\inss-ui-test\src\main\java\gov\uk\inss\webdriver\DriverPath.java
-C:\Users\azolu\IdeaProjects\inss-ui-test\src\main\java\gov\uk\inss\environments\EnvironmentManager.java
 C:\Users\azolu\IdeaProjects\inss-ui-test\src\main\java\gov\uk\inss\base\BasePage.java
-C:\Users\azolu\IdeaProjects\inss-ui-test\src\main\java\gov\uk\inss\webdriver\BrowserEnum.java
-C:\Users\azolu\IdeaProjects\inss-ui-test\src\main\java\gov\uk\inss\config\ConfigFileReader.java
 C:\Users\azolu\IdeaProjects\inss-ui-test\src\main\java\gov\uk\inss\config\ConfigReader.java
 C:\Users\azolu\IdeaProjects\inss-ui-test\src\main\java\gov\uk\inss\webdriver\WebElementFacade.java
 C:\Users\azolu\IdeaProjects\inss-ui-test\src\main\java\gov\uk\inss\webdriver\BrowserFactory.java
 C:\Users\azolu\IdeaProjects\inss-ui-test\src\main\java\gov\uk\inss\environments\EnvironmentEnum.java
 C:\Users\azolu\IdeaProjects\inss-ui-test\src\main\java\gov\uk\inss\webdriver\BrowserManager.java
+C:\Users\azolu\IdeaProjects\inss-ui-test\src\main\java\gov\uk\inss\webdriver\DriverPath.java
+C:\Users\azolu\IdeaProjects\inss-ui-test\src\main\java\gov\uk\inss\environments\EnvironmentManager.java
+C:\Users\azolu\IdeaProjects\inss-ui-test\src\main\java\gov\uk\inss\helper\HelperClass.java
+C:\Users\azolu\IdeaProjects\inss-ui-test\src\main\java\gov\uk\inss\webdriver\BrowserEnum.java
+C:\Users\azolu\IdeaProjects\inss-ui-test\src\main\java\gov\uk\inss\config\ConfigFileReader.java
+C:\Users\azolu\IdeaProjects\inss-ui-test\src\main\java\gov\uk\inss\helper\UtilsHelper.java

@@ -39,7 +39,6 @@ public class BrowserManager extends BasePage {
         chromeOptions.addArguments("start-maximized");
         chromeOptions.addArguments("--remote-allow-origins=*");
         chromeOptions.setHeadless(false);
-
         return chromeOptions;
     }
 
@@ -52,7 +51,6 @@ public class BrowserManager extends BasePage {
 
     public FirefoxOptions setFirefoxOptions() {
         FirefoxOptions firefoxOptions = new FirefoxOptions();
-//        firefoxOptions.addArguments("start-maximized");
         firefoxOptions.setHeadless(false);
         return firefoxOptions;
     }

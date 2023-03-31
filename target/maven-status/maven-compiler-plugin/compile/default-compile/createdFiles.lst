@@ -1,6 +1,7 @@
 gov\uk\inss\environments\EnvironmentManager$1.class
 gov\uk\inss\webdriver\BrowserEnum.class
 gov\uk\inss\webdriver\BrowserFactory.class
+gov\uk\inss\helper\UtilsHelper.class
 gov\uk\inss\webdriver\BrowserManager.class
 gov\uk\inss\config\ConfigReader.class
 gov\uk\inss\webdriver\DriverPath$1.class
@@ -8,6 +9,7 @@ gov\uk\inss\config\ConfigFileReader.class
 gov\uk\inss\webdriver\WebElementFacade.class
 gov\uk\inss\base\BasePage.class
 gov\uk\inss\environments\EnvironmentManager.class
+gov\uk\inss\helper\HelperClass.class
 gov\uk\inss\webdriver\BrowserManager$1.class
 gov\uk\inss\config\TestConfig.class
 gov\uk\inss\environments\EnvironmentEnum.class

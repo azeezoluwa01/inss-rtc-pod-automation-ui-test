@@ -1,4 +1,13 @@
 -------------------------------------------------------------------------------
 Test set: gov.uk.inss.runners.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.655 s - in gov.uk.inss.runners.TestRunner
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 15.713 s <<< FAILURE! - in gov.uk.inss.runners.TestRunner
+Create a one login account(One login tests)  Time elapsed: 6.833 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[rtc]> but was:<[pod]>
+
+Just checking things are mapped together(Proof of Debt tests)  Time elapsed: 3.96 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[rtc]> but was:<[pod]>
+
+Just checking things are mapped together(Report to Credit tests)  Time elapsed: 3.904 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[rtc]> but was:<[pod]>
+

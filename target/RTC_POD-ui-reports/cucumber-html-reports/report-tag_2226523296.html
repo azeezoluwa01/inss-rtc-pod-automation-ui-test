@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>RTC | POD UI report</td>
         <td>1</td>
-      <td>29 Mar 2023, 19:13</td>
+      <td>31 Mar 2023, 10:44</td>
     </tr>
   </tbody>
 </table>
@@ -129,19 +129,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@Regression</td>
-          <td      class="passed"    >9</td>
-          <td >0</td>
+          <td      class="passed"    >6</td>
+          <td      class="failed"    >3</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
           <td class="total">9</td>
 
-          <td  class="passed"    >3</td>
           <td >0</td>
+          <td  class="failed"    >3</td>
           <td class="total">3</td>
 
-          <td class="duration" data-value="1000000">0.001</td>
-          <td class="passed">Passed</td>
+          <td class="duration" data-value="5000000">0.005</td>
+          <td class="failed">Failed</td>
         </tr>
         </tbody>
 
@@ -173,7 +173,7 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_3215473731.html">One login tests</a>
+      <a href="report-feature_1336435493.html">Report to Credit tests</a>
     </div>
 
 
@@ -183,14 +183,14 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Create a one login account</span>
+  <span class="name">Just checking things are mapped together</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -199,7 +199,7 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details ">
+  <div id="element-1" class="collapse collapsable-details  in ">
 
 
   <div class="inner-level hooks-element-before">
@@ -221,7 +221,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">steps.Hook.setUp()</span>
 
-  <span class="lead-duration duration">4.542</span>
+  <span class="lead-duration duration">3.190</span>
 
           </div>
 
@@ -238,9 +238,9 @@ $(document).ready(function() {
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-3">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-3">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -250,7 +250,228 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-3" class="inner-level collapse collapsable-details ">
+  <div id="steps-3" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">I have access to INSS service</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">I want to create a one login account</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">one login account is successful</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-4">
+          <a>org.junit.ComparisonFailure:</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details  in ">
+        <pre>org.junit.ComparisonFailure: expected:&lt;[rtc]&gt; but was:&lt;[pod]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at steps.one_login.create_account.CreateAccountStepDef.OneLoginAccountIsSuccessful(CreateAccountStepDef.java:24)
+	at &#10045;.one login account is successful(classpath:features/rtc/rtc.feature:7)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-5">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-5" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">steps.Hook.tearDown()</span>
+
+  <span class="lead-duration duration">0.706</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_1_3215473731.html">One login tests</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2226523296.html">@Regression</a>
+</div>
+
+
+  <span class="lead-duration duration">0.005</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-6">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Create a one login account</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-6" class="collapse collapsable-details  in ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-7">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-7" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">steps.Hook.setUp()</span>
+
+  <span class="lead-duration duration">5.908</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-8">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-8" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -308,11 +529,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">one login account is successful</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.004</span>
 
 </div>
 
@@ -320,6 +541,22 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-9">
+          <a>org.junit.ComparisonFailure:</a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details  in ">
+        <pre>org.junit.ComparisonFailure: expected:&lt;[rtc]&gt; but was:&lt;[pod]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at steps.one_login.create_account.CreateAccountStepDef.OneLoginAccountIsSuccessful(CreateAccountStepDef.java:24)
+	at &#10045;.one login account is successful(classpath:features/one_login/one_login.feature:10)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -339,7 +576,7 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-4">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-10">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -351,13 +588,13 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-4" class="inner-level collapse collapsable-details ">
+    <div id="after-10" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">steps.Hook.tearDown()</span>
 
-  <span class="lead-duration duration">0.681</span>
+  <span class="lead-duration duration">0.763</span>
 
           </div>
 
@@ -378,7 +615,7 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_1_3324737773.html">Proof of Debt tests</a>
+      <a href="report-feature_2_3324737773.html">Proof of Debt tests</a>
     </div>
 
 
@@ -391,9 +628,9 @@ $(document).ready(function() {
   <span class="lead-duration duration">0.000</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-11">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Just checking things are mapped together</span>
 
@@ -404,11 +641,11 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-5" class="collapse collapsable-details ">
+  <div id="element-11" class="collapse collapsable-details  in ">
 
 
   <div class="inner-level hooks-element-before">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-6">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-12">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -420,13 +657,13 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="before-6" class="inner-level collapse collapsable-details ">
+    <div id="before-12" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
               <span class="location name">steps.Hook.setUp()</span>
 
-  <span class="lead-duration duration">4.410</span>
+  <span class="lead-duration duration">3.254</span>
 
           </div>
 
@@ -443,9 +680,9 @@ $(document).ready(function() {
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-7">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-13">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -455,7 +692,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-7" class="inner-level collapse collapsable-details ">
+  <div id="steps-13" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -513,7 +750,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">one login account is successful</span>
 
@@ -525,6 +762,22 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-14">
+          <a>org.junit.ComparisonFailure:</a>
+      </div>
+      <div id="msg-14" class="collapse collapsable-details  in ">
+        <pre>org.junit.ComparisonFailure: expected:&lt;[rtc]&gt; but was:&lt;[pod]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at steps.one_login.create_account.CreateAccountStepDef.OneLoginAccountIsSuccessful(CreateAccountStepDef.java:24)
+	at &#10045;.one login account is successful(classpath:features/pod/pod.feature:7)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -544,7 +797,7 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-8">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-15">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -556,218 +809,13 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-8" class="inner-level collapse collapsable-details ">
+    <div id="after-15" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">steps.Hook.tearDown()</span>
 
-  <span class="lead-duration duration">0.651</span>
-
-          </div>
-
-
-
-
-
-
-
-        </div>
-    </div>
-  </div>
-
-  </div>
-</div>
-
-
-<div class="element">
-    <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_2_1336435493.html">Report to Credit tests</a>
-    </div>
-
-
-<div class="tags indention">
-    <b>Tags:</b>
-       <a href="report-tag_2226523296.html">@Regression</a>
-</div>
-
-
-  <span class="lead-duration duration">0.000</span>
-
-
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-9">
-
-<div class="brief passed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">Just checking things are mapped together</span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-9" class="collapse collapsable-details ">
-
-
-  <div class="inner-level hooks-element-before">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-10">
-
-<div class="brief passed">
-  <span class="keyword indention">Hooks</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-    </div>
-
-    <div id="before-10" class="inner-level collapse collapsable-details ">
-        <div class="hook">
-          <div class="brief passed">
-            <span class="keyword indention">Before</span>
-              <span class="location name">steps.Hook.setUp()</span>
-
-  <span class="lead-duration duration">2.671</span>
-
-          </div>
-
-
-
-
-
-
-
-        </div>
-    </div>
-  </div>
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-11">
-
-<div class="brief passed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-11" class="inner-level collapse collapsable-details ">
-      <div class="step">
-
-
-<div class="brief step-name-Given passed">
-  <span class="keyword indention">Given</span>
-  <span class="name">I have access to INSS service</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-When passed">
-  <span class="keyword indention">When</span>
-  <span class="name">I want to create a one login account</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then passed">
-  <span class="keyword indention">Then</span>
-  <span class="name">one login account is successful</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-  <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-12">
-
-<div class="brief passed">
-  <span class="keyword indention">Hooks</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-    </div>
-
-    <div id="after-12" class="inner-level collapse collapsable-details ">
-        <div class="hook">
-          <div class="brief passed">
-            <span class="keyword indention">After</span>
-              <span class="location name">steps.Hook.tearDown()</span>
-
-  <span class="lead-duration duration">0.686</span>
+  <span class="lead-duration duration">0.700</span>
 
           </div>
 

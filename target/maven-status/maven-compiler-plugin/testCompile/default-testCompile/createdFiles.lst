@@ -14,9 +14,11 @@ gov\uk\inss\pages\one_login\home\GovUKHomePage.class
 gov\uk\inss\pages\one_login\signin\SignInPage.class
 gov\uk\inss\runners\TestRunner.class
 gov\uk\inss\pages\one_login\create_account\account\CreateAccount.class
+gov\uk\inss\pageEvents\HomePageEvents.class
 gov\uk\inss\pages\one_login\create_account\account\GOVUKAccountSuccess.class
 gov\uk\inss\pages\one_login\create_account\account\CreateAGOVUKAccount.class
 gov\uk\inss\pages\one_login\signin\AuthenticatorApp.class
+gov\uk\inss\pageObjects\HomePageObjects.class
 gov\uk\inss\pages\one_login\create_account\account\CheckYourEmail.class
 gov\uk\inss\pages\one_login\signin\EnterYourPassword.class
 steps\one_login\create_account\CreateAccountStepDef.class
