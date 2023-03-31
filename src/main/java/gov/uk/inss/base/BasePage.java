@@ -2,6 +2,7 @@ package gov.uk.inss.base;
 
 import gov.uk.inss.config.ConfigFileReader;
 import gov.uk.inss.environments.EnvironmentManager;
+import gov.uk.inss.helper.UtilsHelper;
 import gov.uk.inss.webdriver.BrowserManager;
 import gov.uk.inss.webdriver.DriverPath;
 import org.openqa.selenium.WebDriver;
@@ -11,6 +12,7 @@ public class BasePage extends ConfigFileReader {
     public BrowserManager browserManager;
     public DriverPath driverPath;
     public EnvironmentManager environmentManager;
+    public UtilsHelper utilsHelper;
     public String browserName = properties.getProperty("BROWSER_NAME");
     public String chromeDriverPath = "src/main/java/gov/uk/inss/drivers/chromedriver.exe";
     public String firefoxDriverPath = "src/main/java/gov/uk/inss/drivers/geckodriver.exe";

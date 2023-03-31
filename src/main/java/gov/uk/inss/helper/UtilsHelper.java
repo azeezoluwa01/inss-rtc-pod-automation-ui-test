@@ -1,14 +1,20 @@
 package gov.uk.inss.helper;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import gov.uk.inss.base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.List;
 
 public class UtilsHelper extends BasePage {
 
+    public static final int DEFAULT_WAIT_TIMEOUT = 10;
     public WebElement getWebElement(String locatorType, String locatorValue) {
 
         switch (locatorType) {
@@ -70,7 +76,9 @@ public class UtilsHelper extends BasePage {
             while (true) {
                 ((JavascriptExecutor) driver)
                         .executeScript("window.scrollTo(0, document.body.scrollHeight);");
-                //waitForPageToLoad(); create a method to wait for page to load
+
+                waitForPageLoad();
+
                 long newPageHeight = (long) ((JavascriptExecutor) driver)
                         .executeScript("return document.body.scrollHeight");
                 if (newPageHeight == lastPageHeight) {
@@ -91,6 +99,16 @@ public class UtilsHelper extends BasePage {
     public void scrollToElement(WebElement viewOfThisElement){
         JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
         javascriptExecutor.executeScript("arguments[0].scrollIntoView();", viewOfThisElement);
+    }
+
+    public void waitForPageLoad(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(DEFAULT_WAIT_TIMEOUT));
+        ExpectedCondition<Boolean> pageLoadCondition = new ExpectedCondition<Boolean>() {
+            public Boolean apply(WebDriver driver){
+                return ((JavascriptExecutor)driver).executeScript("return document.readyState").equals("complete");
+            }
+        };
+        wait.until(pageLoadCondition);
     }
 
 

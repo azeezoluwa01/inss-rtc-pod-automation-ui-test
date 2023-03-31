@@ -3,6 +3,7 @@ package steps;
 import gov.uk.inss.base.BasePage;
 import gov.uk.inss.environments.EnvironmentManager;
 import gov.uk.inss.helper.HelperClass;
+import gov.uk.inss.helper.UtilsHelper;
 import gov.uk.inss.webdriver.BrowserManager;
 import gov.uk.inss.webdriver.DriverPath;
 import io.cucumber.java.After;
@@ -23,6 +24,8 @@ public class Hook extends BasePage {
     public void setUpEnvironment(){
         environmentManager = new EnvironmentManager();
         environmentManager.getEnvironment();
+        utilsHelper = new UtilsHelper();
+        utilsHelper.waitForPageLoad();
     }
 
     @Before
