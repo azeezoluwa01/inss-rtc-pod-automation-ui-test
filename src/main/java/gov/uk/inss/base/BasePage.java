@@ -12,6 +12,8 @@ public class BasePage extends ConfigFileReader {
     public BrowserManager browserManager;
     public DriverPath driverPath;
     public EnvironmentManager environmentManager;
+    public Runtime runtime;
+    public Process process;
     public UtilsHelper utilsHelper;
     public String browserName = properties.getProperty("BROWSER_NAME");
     public String chromeDriverPath = "src/main/java/gov/uk/inss/drivers/chromedriver.exe";
