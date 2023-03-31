@@ -1,10 +1,7 @@
 package gov.uk.inss.pages.one_login.home;
 
-<<<<<<< HEAD
 import gov.uk.inss.base.BasePage;
-=======
-<<<<<<< HEAD
->>>>>>> master
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,14 +17,14 @@ public class GovUKHomePage extends BasePage {
 //        }
 //    }
 
-    public GovUKHomePage(WebDriver driver){
+    public GovUKHomePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
-        if (!driver.getTitle().equals("GOV Home Page")){
+        if (!driver.getTitle().equals("GOV Home Page")) {
             throw new IllegalStateException("This is not the GOV Home Page" + "current page is: " + driver.getCurrentUrl());
         }
     }
 
-    public GovUKHomePage manageProfile(){
+    public GovUKHomePage manageProfile() {
         //Page encapsulation to manage profile functionality
         return new GovUKHomePage(driver);
     }
@@ -45,8 +42,4 @@ public class GovUKHomePage extends BasePage {
         boolean status = driver.findElement(element1).isDisplayed();
         return status;
     }
-
-=======
-public class GovUKHomePage {
->>>>>>> cf6425264699513621c73f4a89a16d2eb52837ac
 }
