@@ -31,18 +31,21 @@ public class Hook extends BasePage {
         setUpEnvironment();
     }
 
-//    @After
+    @After
     public void tearDown(Scenario scenario) {
         if (scenario.isFailed()) {
             final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-            scenario.attach(screenshot, "image/png", scenario.getName());
+            scenario.attach(screenshot, "image.png", scenario.getName());
         }
         if (driver != null) {
             driver.quit();
         }
     }
-    @After
-    public void tearDown(){
+//    @After
+    public void tearDown2(Scenario scenario){
+        if (scenario.isFailed()){
+
+        }
         driver.quit();
     }
 
