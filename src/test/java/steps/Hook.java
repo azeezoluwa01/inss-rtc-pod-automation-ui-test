@@ -3,12 +3,14 @@ package steps;
 import gov.uk.inss.base.BasePage;
 import gov.uk.inss.environments.EnvironmentManager;
 import gov.uk.inss.helper.UtilsHelper;
+import gov.uk.inss.runners.RetryRule;
 import gov.uk.inss.webdriver.BrowserManager;
 import gov.uk.inss.webdriver.DriverPath;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.apache.commons.io.FileUtils;
+import org.junit.Rule;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -40,20 +42,8 @@ public class Hook extends BasePage {
         setUpEnvironment();
     }
 
-    //    @After
-    public void tearDown(Scenario scenario) throws IOException {
-        if (scenario.isFailed()) {
-            final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-            scenario.attach(screenshot, "image.png", scenario.getName());
-        }
-        if (driver != null) {
-            browserManager.endLocalBrowserProcessesInTaskManager();
-            driver.quit();
-        }
-    }
-
     @After
-    public void tearDown2(Scenario scenario) throws IOException {
+    public void tearDown(Scenario scenario) throws IOException {
         if (scenario.isFailed()) {
             takeScreenshotsOfPage(scenario);
         }
@@ -61,6 +51,7 @@ public class Hook extends BasePage {
             browserManager.endLocalBrowserProcessesInTaskManager();
             driver.quit();
         }
+
     }
 
     public void takeScreenshotsOfPage(Scenario scenario) {
@@ -75,5 +66,9 @@ public class Hook extends BasePage {
             e.printStackTrace();
         }
     }
+
+    //Set retry count argument
+    @Rule
+    public RetryRule retryRule = new RetryRule(3);
 
 }

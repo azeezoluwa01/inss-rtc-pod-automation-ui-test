@@ -19,7 +19,6 @@
         <lombok.version>1.18.24</lombok.version>
         <junit.version>4.13.2</junit.version>
         <junit-jupiter-api.version>5.8.2</junit-jupiter-api.version>
-        <junit.version>4.13.2</junit.version>
         <cucumber.version>7.2.3</cucumber.version>
         <webdrivemanager.version>5.0.1</webdrivemanager.version>
         <cucumber-picocontainer.version>1.2.6</cucumber-picocontainer.version>

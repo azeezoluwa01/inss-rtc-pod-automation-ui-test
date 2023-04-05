@@ -9,12 +9,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 import java.util.List;
 
 public class UtilsHelper extends BasePage {
-
+    protected static final Logger LOGGER = LoggerFactory.getLogger("UtilsHelper.class");
     public static final long DEFAULT_WAIT_TIMEOUT = 10l;
     public WebElement getWebElement(String locatorType, String locatorValue) {
 
@@ -112,6 +114,15 @@ public class UtilsHelper extends BasePage {
 
     public void waitForPageLoad(){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(DEFAULT_WAIT_TIMEOUT));
+        ExpectedCondition<Boolean> pageLoadCondition = driver -> {
+            assert driver != null;
+            return ((JavascriptExecutor)driver).executeScript("return document.readyState").equals("complete");
+        };
+        wait.until(pageLoadCondition);
+    }
+
+    public void waitForPageLoad2(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(DEFAULT_WAIT_TIMEOUT));
         ExpectedCondition<Boolean> pageLoadCondition = new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver driver){
                 return ((JavascriptExecutor)driver).executeScript("return document.readyState").equals("complete");
@@ -119,7 +130,6 @@ public class UtilsHelper extends BasePage {
         };
         wait.until(pageLoadCondition);
     }
-
 
     public WebElement clickObject(WebElement element) {
         element.click();

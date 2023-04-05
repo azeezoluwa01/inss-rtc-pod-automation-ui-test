@@ -17,7 +17,6 @@ public class BrowserManager extends BasePage {
     public ChromeOptions chromeOptions = null;
     BrowserEnum browserEnum = BrowserEnum.valueOf(browserName.toUpperCase());
     public void getBrowserType() {
-//        BrowserEnum browserEnum = BrowserEnum.valueOf(browserName.toUpperCase());
         BrowserManager chromeBrowserOption = new BrowserManager();
         BrowserManager edgeBrowserOption = new BrowserManager();
         BrowserManager firefoxBrowserOption = new BrowserManager();

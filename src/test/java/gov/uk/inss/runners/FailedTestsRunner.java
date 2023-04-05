@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = {"@target/failedscenarios.txt"},
         glue = "steps",
-        tags = "@Regression1",
+        tags = "@Regression",
         plugin = {"pretty",
                 "json:target/cucumber.json"}
 )
