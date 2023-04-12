@@ -37,17 +37,17 @@ public class HelperClass {
         }
     }
 
-    @Before
-    public static void setUp() {
-        HelperClass.setUpDriver();
-    }
-
-    @After
-    public static void tearDown(Scenario scenario){
-        if (scenario.isFailed()){
-            final byte[] screenshot = ((TakesScreenshot)HelperClass.getDriver()).getScreenshotAs(OutputType.BYTES);
-            scenario.attach(screenshot, "image/png", scenario.getName());
-        }
-    }
+//    @Before
+//    public static void setUp() {
+//        HelperClass.setUpDriver();
+//    }
+//
+//    @After
+//    public static void tearDown(Scenario scenario){
+//        if (scenario.isFailed()){
+//            final byte[] screenshot = ((TakesScreenshot)HelperClass.getDriver()).getScreenshotAs(OutputType.BYTES);
+//            scenario.attach(screenshot, "image/png", scenario.getName());
+//        }
+//    }
 
 }

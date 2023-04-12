@@ -1,18 +1,20 @@
 package gov.uk.inss.helper;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import gov.uk.inss.base.BasePage;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import io.cucumber.java.Scenario;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.File;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 import java.util.List;
 
 public class UtilsHelper extends BasePage {
@@ -108,7 +110,7 @@ public class UtilsHelper extends BasePage {
     }
 
     public boolean waitForElementToBeInvisible(WebElement element, long timeOutInSeconds){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(DEFAULT_WAIT_TIMEOUT));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOutInSeconds));
         return wait.until(ExpectedConditions.invisibilityOf(element));
     }
 
@@ -139,6 +141,19 @@ public class UtilsHelper extends BasePage {
     public WebElement enterText(WebElement element, String data) {
         element.sendKeys(data);
         return element;
+    }
+
+    public void takeScreenshotsOfPage(Scenario scenario) {
+        TakesScreenshot screenshot = (TakesScreenshot) driver;
+        File source = screenshot.getScreenshotAs(OutputType.FILE);
+        try {
+            Date date;
+            DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH-mm-ss");
+            date = new Date();
+            FileUtils.copyFile(source, new File(String.format("src/test/resources/screenshots/" + scenario.getStatus() + " " + scenario.getName() + " " + dateFormat.format(date) + ".png")));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 

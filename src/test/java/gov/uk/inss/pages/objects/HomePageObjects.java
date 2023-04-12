@@ -1,4 +1,4 @@
-package gov.uk.inss.pageObjects;
+package gov.uk.inss.pages.objects;
 
 public interface HomePageObjects {
 

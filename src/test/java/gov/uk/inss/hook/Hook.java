@@ -1,4 +1,4 @@
-package hook;
+package gov.uk.inss.hook;
 
 import gov.uk.inss.base.BasePage;
 import io.cucumber.java.After;
@@ -11,7 +11,7 @@ public class Hook extends BasePage {
     Hook hook = new Hook();
     @Before
     public void setUp() throws IOException {
-        System.out.println("run second");
+        System.out.println("run first");
         hook.setUp();
     }
 

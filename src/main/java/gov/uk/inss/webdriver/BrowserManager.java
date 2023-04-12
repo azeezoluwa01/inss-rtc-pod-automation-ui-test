@@ -14,7 +14,7 @@ import java.io.IOException;
 
 public class BrowserManager extends BasePage {
     protected static final Logger LOGGER = LoggerFactory.getLogger("BrowserManager.class");
-    public ChromeOptions chromeOptions = null;
+    public ChromeOptions chromeOptions;
     BrowserEnum browserEnum = BrowserEnum.valueOf(browserName.toUpperCase());
     public void getBrowserType() {
         BrowserManager chromeBrowserOption = new BrowserManager();

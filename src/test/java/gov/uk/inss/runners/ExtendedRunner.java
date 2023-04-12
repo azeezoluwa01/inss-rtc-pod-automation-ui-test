@@ -19,14 +19,14 @@ import org.junit.runner.RunWith;
         jsonUsageReport = "target/cucumber-usage.json",
         usageReport = true,
         toPDF = true,
-        includeCoverageTags = {"@Regression1"},
+        includeCoverageTags = {"@Regression"},
         outputFolder = "target"
 )
 
 @CucumberOptions(
         features = {"classpath:features"},
-        glue = "steps",
-        tags = "@Regression1",
+        glue = "gov/uk/inss/steps",
+        tags = "@Regression",
         plugin = {"pretty",
                 "json:target/RTC_POD-ui-reports/cucumber.json",
                 "json:target/cucumber.json",

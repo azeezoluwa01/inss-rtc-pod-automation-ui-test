@@ -1,4 +1,4 @@
-package steps.one_login.home;
+package gov.uk.inss.steps.one_login.home;
 
 import io.cucumber.java.en.Given;
 

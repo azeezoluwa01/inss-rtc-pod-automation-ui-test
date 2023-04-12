@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = {"classpath:features"},
-        glue = "steps",
+        glue = "gov/uk/inss/steps",
         tags = "@Regression",
         plugin = {"pretty",
                 "json:target/RTC_POD-ui-reports/cucumber.json",
@@ -17,4 +17,5 @@ import org.junit.runner.RunWith;
 
 )
 public class TestRunner {
+
 }
