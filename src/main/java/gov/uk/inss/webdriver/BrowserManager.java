@@ -11,8 +11,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.time.Duration;
 
 public class BrowserManager extends BasePage {
+    private static final int TIMEOUT = 10;
     protected static final Logger LOGGER = LoggerFactory.getLogger("BrowserManager.class");
     public ChromeOptions chromeOptions;
     BrowserEnum browserEnum = BrowserEnum.valueOf(browserName.toUpperCase());
@@ -24,17 +26,24 @@ public class BrowserManager extends BasePage {
         switch (browserEnum) {
             case CHROME:
                 driver = new ChromeDriver(chromeBrowserOption.setChromeOptions());
+                implicitlyWait();
                 break;
             case EDGE:
                 driver = new EdgeDriver(edgeBrowserOption.setEdgeOptions());
+                implicitlyWait();
                 break;
             case FIREFOX:
                 driver = new FirefoxDriver(firefoxBrowserOption.setFirefoxOptions());
+                implicitlyWait();
                 break;
             default:
                 LOGGER.error("No browser found!");
                 break;
         }
+    }
+
+    public void implicitlyWait(){
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
     }
 
     public ChromeOptions setChromeOptions() {
