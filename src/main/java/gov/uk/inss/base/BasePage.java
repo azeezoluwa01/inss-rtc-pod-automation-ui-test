@@ -22,6 +22,7 @@ public class BasePage extends ConfigFileReader {
     public String chromeDriverProperty = "webdriver.chrome.driver";
     public String firefoxDriverProperty = "webdriver.gecko.driver";
     public String edgeDriverProperty = "webdriver.edge.driver";
+    public String local_env = properties.getProperty("local_env");
     public String qa_env = properties.getProperty("qa_env");
     public String dev_env = properties.getProperty("dev_env");
     public String preprod_env = properties.getProperty("preprod_env");

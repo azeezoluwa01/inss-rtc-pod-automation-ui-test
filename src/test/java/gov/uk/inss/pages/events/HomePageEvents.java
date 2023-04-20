@@ -6,6 +6,10 @@ import gov.uk.inss.pages.objects.HomePageObjects;
 public class HomePageEvents {
     UtilsHelper utilsHelper = new UtilsHelper();
     public void clickButton(){
-        utilsHelper.getWebElement("XPATH", HomePageObjects.button);
+        utilsHelper.getWebElement("ID", HomePageObjects.button);
+    }
+
+    public void clickElement(){
+        utilsHelper.getWebElement("ID", HomePageObjects.element);
     }
 }

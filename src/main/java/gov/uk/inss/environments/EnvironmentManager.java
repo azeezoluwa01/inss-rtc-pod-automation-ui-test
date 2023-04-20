@@ -12,6 +12,9 @@ public class EnvironmentManager extends BasePage {
         EnvironmentEnum environmentEnum = EnvironmentEnum.valueOf(env.toUpperCase());
 
         switch (environmentEnum) {
+            case LOCAL:
+                getDriver().get(local_env);
+                break;
             case QA:
                 getDriver().get(qa_env);
                 break;

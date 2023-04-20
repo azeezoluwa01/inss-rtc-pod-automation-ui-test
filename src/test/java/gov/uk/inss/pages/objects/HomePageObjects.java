@@ -2,10 +2,7 @@ package gov.uk.inss.pages.objects;
 
 public interface HomePageObjects {
 
-    String button = "add element here";
-    String email = "add element here";
-    String firstName = "add element here";
-    String lastName = "add element here";
+    String button = "details-button";
+    String element = "proceed-link";
 
-    int age = 1;
 }

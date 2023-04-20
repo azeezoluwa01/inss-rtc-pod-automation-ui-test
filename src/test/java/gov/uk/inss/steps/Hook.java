@@ -28,7 +28,7 @@ public class Hook extends BasePage {
     }
 
     @Before
-    public void setUp() throws IOException {
+    public void setUp() {
         initialisation();
         setUpEnvironment();
     }
@@ -49,7 +49,6 @@ public class Hook extends BasePage {
     //Set retry count argument
 //    @Rule
 //    public RetryRule retryRule = new RetryRule(3);
-
 
 
 }

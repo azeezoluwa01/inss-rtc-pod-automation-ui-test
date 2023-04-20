@@ -156,6 +156,8 @@
                 <configuration>
                     <testFailureIgnore>true</testFailureIgnore>
                     <skipTests>false</skipTests>
+<!--                    <parallel>all</parallel>-->
+<!--                    <threadCount>3</threadCount>-->
                 </configuration>
             </plugin>
             <plugin>

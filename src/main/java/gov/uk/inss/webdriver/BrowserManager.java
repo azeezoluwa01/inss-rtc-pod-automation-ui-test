@@ -18,6 +18,7 @@ public class BrowserManager extends BasePage {
     protected static final Logger LOGGER = LoggerFactory.getLogger("BrowserManager.class");
     public ChromeOptions chromeOptions;
     BrowserEnum browserEnum = BrowserEnum.valueOf(browserName.toUpperCase());
+
     public void getBrowserType() {
         BrowserManager chromeBrowserOption = new BrowserManager();
         BrowserManager edgeBrowserOption = new BrowserManager();
@@ -42,7 +43,7 @@ public class BrowserManager extends BasePage {
         }
     }
 
-    public void implicitlyWait(){
+    public void implicitlyWait() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
     }
 
@@ -50,19 +51,22 @@ public class BrowserManager extends BasePage {
         chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("start-maximized");
         chromeOptions.addArguments("--remote-allow-origins=*");
+        chromeOptions.addArguments("ignore-certificate-errors");
         chromeOptions.setHeadless(false);
         return chromeOptions;
     }
 
     public EdgeOptions setEdgeOptions() {
         EdgeOptions edgeOptions = new EdgeOptions();
-        edgeOptions.addArguments("start-maximized");
+//        edgeOptions.addArguments("start-maximized");
+//        edgeOptions.addArguments("ignore-certificate-errors");
         edgeOptions.setHeadless(false);
         return edgeOptions;
     }
 
     public FirefoxOptions setFirefoxOptions() {
         FirefoxOptions firefoxOptions = new FirefoxOptions();
+//        firefoxOptions.addArguments("ignore-certificate-errors");
         firefoxOptions.setHeadless(false);
         return firefoxOptions;
     }
