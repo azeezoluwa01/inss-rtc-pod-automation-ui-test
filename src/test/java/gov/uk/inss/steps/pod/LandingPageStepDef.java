@@ -1,24 +1,28 @@
 package gov.uk.inss.steps.pod;
 
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import gov.uk.inss.pages.common.base.CommonBasePage;
+import gov.uk.inss.pages.common.pod.HowWeUseYourPOD;
+import gov.uk.inss.pages.common.pod.LandingPage;
+import io.cucumber.java.en.Given;
 
 public class LandingPageStepDef {
+    LandingPage landingPage = new LandingPage();
+    HowWeUseYourPOD howWeUseYourPOD = new HowWeUseYourPOD();
+    final String pageHeader = "Get information about an insolvent person or company";
+    final String titleName = "GOV.UK - The best place to find government services and information";
 
-    @When("I have received a letter telling me to complete one so that I can get a dividend payment")
-    public void iHaveReceivedLetterToCompletePOD() {
 
+    @Given("I am on POD landing page")
+    public void iAmOnPODLandingPage() {
+        CommonBasePage.verifyHeader(pageHeader, landingPage.getPageHeader());
+        CommonBasePage.verifyTitle(titleName, landingPage.getPageTitle());
     }
-    @When("I have received a letter telling me to complete one so I can vote on removing the official receiver as the trustee or liquidator")
-    public void iHaveReceivedLetterToCompletePODAndVote() {
 
+    @Given("I want to complete a POD")
+    public void iWantToCompletePOD() {
+        landingPage.clickStartNowButton();
+        howWeUseYourPOD.clickContinueButton();
     }
-    @When("I have not been asked to complete one, but I want to tell you how much I'm owed")
-    public void iHaveReceivedLetterToCompletePODAndMoneyOwned() {
 
-    }
-    @Then("proof of debt is successfully submitted")
-    public void proofOfDebtIsSuccessfullySubmitted() {
 
-    }
 }

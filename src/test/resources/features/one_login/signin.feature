@@ -1,4 +1,4 @@
-@Regression @onelogin
+@Regression
 Feature: Signin tests
 
   Background:
