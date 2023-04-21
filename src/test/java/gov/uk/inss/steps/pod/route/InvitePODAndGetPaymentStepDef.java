@@ -13,5 +13,6 @@ public class InvitePODAndGetPaymentStepDef {
     public void iHaveReceivedLetterToCompletePOD() {
         whyAreYouCompletingPOD.verifyPageHeader();
         invitePODAndGetPayment.clickInvitePOD();
+        whyAreYouCompletingPOD.clickContinueButton();
     }
 }

@@ -6,9 +6,11 @@ import gov.uk.inss.helper.UtilsHelper;
 import gov.uk.inss.webdriver.BrowserManager;
 import gov.uk.inss.webdriver.DriverPath;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage extends ConfigFileReader {
     public static WebDriver driver;
+    public static WebDriverWait wait;
     public BrowserManager browserManager;
     public DriverPath driverPath;
     public EnvironmentManager environmentManager;

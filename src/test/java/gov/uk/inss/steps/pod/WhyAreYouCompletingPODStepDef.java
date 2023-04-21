@@ -10,7 +10,7 @@ public class WhyAreYouCompletingPODStepDef {
 
 //    final String pageHeader = "Why are you completing a proof of debt?";
 
-    @When("I click continue button on why are you completing POD page")
+    @When("I click continue button")
     public void iClickContinueButton() {
         whyAreYouCompletingPOD.clickContinueButton();
     }
