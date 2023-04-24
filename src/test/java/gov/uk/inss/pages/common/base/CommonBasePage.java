@@ -5,11 +5,16 @@ import org.junit.Assert;
 
 public class CommonBasePage extends BasePage {
 
-    public static void verifyHeader(String expectedHeader, String ActualHeader){
-        Assert.assertEquals(expectedHeader, ActualHeader);
+
+    public static void verifyHeader(String expectedHeader, String actualHeader){
+        Assert.assertEquals(expectedHeader, actualHeader);
     }
 
-    public static void verifyTitle(String expectedTitle, String ActualTitle){
-        Assert.assertEquals(expectedTitle, ActualTitle);
+    public static void verifyTitle(String expectedTitle, String actualTitle){
+        Assert.assertEquals(expectedTitle, actualTitle);
+    }
+
+    public static void verifyPage(String expectedPage, String actualPage){
+
     }
 }

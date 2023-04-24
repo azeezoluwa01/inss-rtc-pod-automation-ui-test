@@ -2,7 +2,6 @@ package gov.uk.inss.steps.pod;
 
 import gov.uk.inss.pages.common.pod.WhatIsTheTotalMoney;
 import io.cucumber.java.en.When;
-
 public class WhatIsTheTotalMoneyStepDef {
     WhatIsTheTotalMoney whatIsTheTotalMoney = new WhatIsTheTotalMoney();
 

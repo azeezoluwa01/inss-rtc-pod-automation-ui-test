@@ -1,6 +1,7 @@
 package gov.uk.inss.pages.common.pod;
 
 import gov.uk.inss.base.BasePage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -39,6 +40,10 @@ public class WhatIsTheTotalMoney extends BasePage {
     public void enterAmountInOtherCurrency(){
         wait.until(ExpectedConditions.visibilityOf(enterAmountInOtherCurrency));
         enterAmountInOtherCurrency.sendKeys(properties.getProperty("amountOwed"));
+    }
+
+    public void enter(String str){
+        driver.findElement(By.id(str));
     }
 
 

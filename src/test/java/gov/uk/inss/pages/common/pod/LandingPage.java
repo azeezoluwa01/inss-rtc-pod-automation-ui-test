@@ -23,6 +23,10 @@ public class LandingPage extends BasePage {
     @FindBy(how = How.CLASS_NAME, using = "govuk-heading-l")
     public WebElement header;
 
+    @CacheLookup
+    @FindBy(how = How.CLASS_NAME, using = "govuk-fieldset__heading")
+    public WebElement header2;
+
     public void clickStartNowButton() {
         startNow.click();
     }
@@ -33,6 +37,10 @@ public class LandingPage extends BasePage {
 
     public String getPageHeader(){
         return header.getText();
+    }
+
+    public String getPageHeader2(){
+        return header2.getText();
     }
 
 

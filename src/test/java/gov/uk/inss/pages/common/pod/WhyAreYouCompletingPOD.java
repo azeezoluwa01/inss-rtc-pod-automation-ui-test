@@ -7,6 +7,10 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class WhyAreYouCompletingPOD extends BasePage {
 
@@ -14,6 +18,7 @@ public class WhyAreYouCompletingPOD extends BasePage {
 
     public WhyAreYouCompletingPOD() {
         PageFactory.initElements(driver, this);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(2));
     }
 
     @CacheLookup
@@ -23,6 +28,11 @@ public class WhyAreYouCompletingPOD extends BasePage {
     @CacheLookup
     @FindBy(how = How.CLASS_NAME, using = "govuk-button")
     public WebElement continueButton;
+
+    @CacheLookup
+    @FindBy(how = How.XPATH, using = "//button[contains(text(),'Continue')]")
+    public WebElement continueButton2;
+
 
     @CacheLookup
     @FindBy(how = How.TAG_NAME, using = "li")
@@ -37,7 +47,13 @@ public class WhyAreYouCompletingPOD extends BasePage {
     }
 
     public void clickContinueButton(){
+        wait.until(ExpectedConditions.visibilityOf(continueButton));
         continueButton.click();
+    }
+
+    public void clickContinueButton2(){
+        wait.until(ExpectedConditions.visibilityOf(continueButton2));
+        continueButton2.click();
     }
 
     public String getErrorValidation(){
