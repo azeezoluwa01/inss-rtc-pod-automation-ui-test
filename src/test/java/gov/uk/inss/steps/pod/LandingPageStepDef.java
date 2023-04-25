@@ -11,6 +11,7 @@ public class LandingPageStepDef {
     final String pageHeader = "Get information about an insolvent person or company";
     final String titleName = "GOV.UK - The best place to find government services and information";
 
+    final String screenName = "How we use your proof of debt";
 
     @Given("I am on POD landing page")
     public void iAmOnPODLandingPage() {
@@ -18,11 +19,17 @@ public class LandingPageStepDef {
         CommonBasePage.verifyTitle(titleName, landingPage.getPageTitle());
     }
 
+    @Given("I click start now button")
+    public void i_click_start_now_button() {
+        landingPage.clickStartNowButton();
+    }
+
     @Given("I want to complete a POD")
     public void iWantToCompletePOD() {
-        landingPage.clickStartNowButton();
+//        landingPage.clickStartNowButton();
         howWeUseYourPOD.clickContinueButton();
     }
+
 
 
 }

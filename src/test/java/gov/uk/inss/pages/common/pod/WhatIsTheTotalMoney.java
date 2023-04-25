@@ -18,15 +18,15 @@ public class WhatIsTheTotalMoney extends BasePage {
 
     @CacheLookup
     @FindBy(how = How.ID, using = "VAT")
-    public WebElement enterAmountInPounds;
+    private WebElement enterAmountInPounds;
 
     @CacheLookup
     @FindBy(how = How.ID, using = "sterling")
-    public WebElement debtNotInPounds;
+    private WebElement debtNotInPounds;
 
     @CacheLookup
     @FindBy(how = How.ID, using = "debt")
-    public WebElement enterAmountInOtherCurrency;
+    private WebElement enterAmountInOtherCurrency;
 
 
     public void enterAmountInPounds(){

@@ -6,6 +6,10 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class LandingPage extends BasePage {
 
@@ -13,19 +17,24 @@ public class LandingPage extends BasePage {
     //Before you start
     public LandingPage() {
         PageFactory.initElements(driver, this);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(2000));
     }
 
     @CacheLookup
     @FindBy(how = How.CLASS_NAME, using = "govuk-button")
-    public WebElement startNow;
+    private WebElement startNow;
 
     @CacheLookup
     @FindBy(how = How.CLASS_NAME, using = "govuk-heading-l")
-    public WebElement header;
+    private WebElement header;
 
     @CacheLookup
     @FindBy(how = How.CLASS_NAME, using = "govuk-fieldset__heading")
-    public WebElement header2;
+    private WebElement header2;
+
+//    @CacheLookup
+//    @FindBy(how = How.CLASS_NAME, using = "govuk-label govuk-label--l")
+//    public WebElement header3;
 
     public void clickStartNowButton() {
         startNow.click();
@@ -39,9 +48,15 @@ public class LandingPage extends BasePage {
         return header.getText();
     }
 
-    public String getPageHeader2(){
+    public String getPageHeader2() throws InterruptedException {
+        Thread.sleep(2000);
+        wait.until(ExpectedConditions.visibilityOf(header2));
         return header2.getText();
     }
+
+//    public String getPageHeader3(){
+//        return header3.getText();
+//    }
 
 
 }

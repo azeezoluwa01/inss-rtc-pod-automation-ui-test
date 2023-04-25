@@ -15,6 +15,6 @@ public class CommonBasePage extends BasePage {
     }
 
     public static void verifyPage(String expectedPage, String actualPage){
-
+        Assert.assertEquals(expectedPage, actualPage);
     }
 }

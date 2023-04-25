@@ -13,7 +13,12 @@ public class CommonStepDef {
     }
 
     @When("I am on {string} screen")
-    public void i_am_on_screen(String expectedHeader) {
+    public void i_am_on_screen(String expectedHeader) throws InterruptedException {
         CommonBasePage.verifyHeader(expectedHeader, landingPage.getPageHeader2());
     }
+
+//    @When("I am on {string}")
+//    public void i_am_on(String expectedHeader) {
+//        CommonBasePage.verifyHeader(expectedHeader, landingPage.getPageHeader3());
+//    }
 }

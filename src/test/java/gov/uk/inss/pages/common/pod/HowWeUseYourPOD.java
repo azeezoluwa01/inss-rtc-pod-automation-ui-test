@@ -6,16 +6,20 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class HowWeUseYourPOD extends BasePage {
 
     public HowWeUseYourPOD(){
         PageFactory.initElements(driver, this);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(2000));
     }
 
     @CacheLookup
     @FindBy(how = How.CLASS_NAME, using = "govuk-button")
-    public WebElement continueButton;
+    private WebElement continueButton;
 
     public void clickContinueButton(){
         continueButton.click();

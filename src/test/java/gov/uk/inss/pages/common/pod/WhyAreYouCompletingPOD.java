@@ -18,25 +18,24 @@ public class WhyAreYouCompletingPOD extends BasePage {
 
     public WhyAreYouCompletingPOD() {
         PageFactory.initElements(driver, this);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(2000));
     }
 
     @CacheLookup
     @FindBy(how = How.CLASS_NAME, using = "govuk-fieldset__heading")
-    public WebElement header;
+    private WebElement header;
 
     @CacheLookup
     @FindBy(how = How.CLASS_NAME, using = "govuk-button")
-    public WebElement continueButton;
+    private WebElement continueButton;
 
     @CacheLookup
     @FindBy(how = How.XPATH, using = "//button[contains(text(),'Continue')]")
-    public WebElement continueButton2;
-
+    private WebElement continueButton2;
 
     @CacheLookup
     @FindBy(how = How.TAG_NAME, using = "li")
-    public WebElement errorMessage;
+    private WebElement errorMessage;
 
     public String getHeader(){
         return header.getText();

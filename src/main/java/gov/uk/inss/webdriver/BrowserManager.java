@@ -27,20 +27,18 @@ public class BrowserManager extends BasePage {
         switch (browserEnum) {
             case CHROME:
                 driver = new ChromeDriver(chromeBrowserOption.setChromeOptions());
-                implicitlyWait();
                 break;
             case EDGE:
                 driver = new EdgeDriver(edgeBrowserOption.setEdgeOptions());
-                implicitlyWait();
                 break;
             case FIREFOX:
                 driver = new FirefoxDriver(firefoxBrowserOption.setFirefoxOptions());
-                implicitlyWait();
                 break;
             default:
                 LOGGER.error("No browser found!");
                 break;
         }
+        implicitlyWait();
     }
 
     public void implicitlyWait() {
