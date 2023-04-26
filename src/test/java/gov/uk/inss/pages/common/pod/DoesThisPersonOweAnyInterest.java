@@ -42,8 +42,9 @@ public class DoesThisPersonOweAnyInterest extends BasePage {
             clickYes();
         } else if (interest.equalsIgnoreCase("no")) {
             clickNo();
-        } else throw new RuntimeException("You must answer yes or no to POD interst owed question");
+        } else throw new RuntimeException("You must answer yes or no to POD interest owed question");
     }
+
 
 //    public String getPageHeader3(){
 //        return header3.getText();

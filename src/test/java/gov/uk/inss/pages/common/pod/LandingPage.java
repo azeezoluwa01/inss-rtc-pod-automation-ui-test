@@ -48,8 +48,7 @@ public class LandingPage extends BasePage {
         return header.getText();
     }
 
-    public String getPageHeader2() throws InterruptedException {
-        Thread.sleep(2000);
+    public String getPageHeader2() {
         wait.until(ExpectedConditions.visibilityOf(header2));
         return header2.getText();
     }

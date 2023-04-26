@@ -45,12 +45,12 @@ public class WhyAreYouCompletingPOD extends BasePage {
         Assert.assertEquals(pageHeader, getHeader());
     }
 
-    public void clickContinueButton(){
+    public void clickContinueButton() {
         wait.until(ExpectedConditions.visibilityOf(continueButton));
         continueButton.click();
     }
 
-    public void clickContinueButton2(){
+    public void clickContinueButton2() {
         wait.until(ExpectedConditions.visibilityOf(continueButton2));
         continueButton2.click();
     }

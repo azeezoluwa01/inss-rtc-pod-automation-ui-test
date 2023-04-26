@@ -10,7 +10,7 @@ public class InvitePODAndGetPaymentStepDef {
     InvitePODAndGetPayment invitePODAndGetPayment = new InvitePODAndGetPayment();
     WhyAreYouCompletingPOD whyAreYouCompletingPOD = new WhyAreYouCompletingPOD();
     @When("I have received a letter telling me to complete one so that I can get a dividend payment")
-    public void iHaveReceivedLetterToCompletePOD() {
+    public void iHaveReceivedLetterToCompletePOD() throws InterruptedException {
         whyAreYouCompletingPOD.verifyPageHeader();
         invitePODAndGetPayment.clickInvitePOD();
         whyAreYouCompletingPOD.clickContinueButton();
