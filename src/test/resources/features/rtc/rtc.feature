@@ -1,4 +1,4 @@
-@Regression @rtc
+@Regression
 Feature: Report to Creditors tests
 
   @Regression @Smoke

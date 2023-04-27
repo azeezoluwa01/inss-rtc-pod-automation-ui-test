@@ -17,6 +17,5 @@ public class CreateAccountStepDef {
     @Then("one login account is successful")
     public void OneLoginAccountIsSuccessful() {
         System.out.println("One login account is successful");
-        Assert.assertEquals("rtc", "pod");
     }
 }

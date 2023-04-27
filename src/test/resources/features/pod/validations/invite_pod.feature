@@ -1,5 +1,5 @@
 @Regression
-Feature: POD - Error validations
+Feature: POD - Error validations on Invite & Dividend Route
 
   Background: Access to INSS Service
     Given I have access to INSS service

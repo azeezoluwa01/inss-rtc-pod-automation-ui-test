@@ -15,13 +15,16 @@ protected static final Logger LOGGER = LoggerFactory.getLogger("DriverPath.class
                 WebDriverManager.chromedriver().setup();
                 break;
             case EDGE:
-//                System.setProperty(edgeDriverProperty, edgeDriverPath);
-                WebDriverManager.edgedriver().setup();
+                System.setProperty(edgeDriverProperty, edgeDriverPath);
+//                WebDriverManager.edgedriver().setup();
                 break;
             case FIREFOX:
                 System.setProperty(firefoxDriverProperty, firefoxDriverPath);
 //                WebDriverManager.firefoxdriver().setup();
                 break;
+            case SAFARI:
+//                System.setProperty();
+                WebDriverManager.safaridriver().setup();
             default:
                 LOGGER.error("No driver path found!");
                 break;

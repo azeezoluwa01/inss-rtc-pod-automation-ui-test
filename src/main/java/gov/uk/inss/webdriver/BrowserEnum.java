@@ -3,7 +3,8 @@ package gov.uk.inss.webdriver;
 public enum BrowserEnum {
     CHROME,
     FIREFOX,
-    EDGE;
+    EDGE,
+    SAFARI;
 
     private BrowserEnum(){
 
