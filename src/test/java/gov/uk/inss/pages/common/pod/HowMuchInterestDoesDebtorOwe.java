@@ -15,7 +15,7 @@ public class HowMuchInterestDoesDebtorOwe extends BasePage {
 
     public HowMuchInterestDoesDebtorOwe(){
         PageFactory.initElements(driver, this);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(2000));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
     @CacheLookup

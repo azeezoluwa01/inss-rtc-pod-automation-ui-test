@@ -10,28 +10,18 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class HowWeUseYourPOD extends BasePage {
+public class Dashboard extends BasePage {
 
-    public HowWeUseYourPOD(){
+    public Dashboard(){
         PageFactory.initElements(driver, this);
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
     @CacheLookup
-    @FindBy(how = How.CLASS_NAME, using = "govuk-button")
-    private WebElement continueButton;
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Start')]")
+    private WebElement start;
 
-    @CacheLookup
-    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Continue')]")
-    private WebElement continueButton2;
-
-    public void clickContinueButton(){
-        continueButton.click();
+    public void clickStart(){
+        start.click();
     }
-
-    public void clickContinueButton2(){
-        continueButton2.click();
-    }
-
-
 }

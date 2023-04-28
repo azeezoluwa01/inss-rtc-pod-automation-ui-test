@@ -1,5 +1,5 @@
 @Regression
-Feature: No invitation received POD
+Feature: Complete POD - No invitation received
 
   Background: Access to INSS Service
     Given I have access to INSS service

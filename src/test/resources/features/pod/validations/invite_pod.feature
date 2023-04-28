@@ -1,4 +1,4 @@
-@Regression
+@Regression1
 Feature: POD - Error validations on Invite & Dividend Route
 
   Background: Access to INSS Service
@@ -7,16 +7,24 @@ Feature: POD - Error validations on Invite & Dividend Route
     And I am on "Get information about an insolvent person or company" page
     And I click start now button
     And I want to complete a POD
+    And I enter valid login credentials
+    And I click a submit button
+    And I enter registration codes
+    And I click continue button
+    And I enter "First" and "Last" names
+    And I click continue button on names page
+    And I click start button on Dashboard
+    And I click continue button on how we use your pod
 
   @e2e
   Scenario: Error validation on Why are you completing a POD page
-    When I click continue button
+    When I click continue button on screen
     Then I should see "Select why you are completing a proof of debt."
 
   @e2e @InProgress
   Scenario: Error validation on What is the total amount of money that debtor owes page
     When I have received a letter telling me to complete one so that I can get a dividend payment
-    And I click continue button
+    And I click continue button on screen
     Then I should see "Enter how much money you are owed"
 
   @e2e @InProgress @NeedsClarification

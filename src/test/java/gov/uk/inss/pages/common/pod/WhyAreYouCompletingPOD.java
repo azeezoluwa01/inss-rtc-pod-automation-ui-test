@@ -18,7 +18,7 @@ public class WhyAreYouCompletingPOD extends BasePage {
 
     public WhyAreYouCompletingPOD() {
         PageFactory.initElements(driver, this);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(2000));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
     @CacheLookup

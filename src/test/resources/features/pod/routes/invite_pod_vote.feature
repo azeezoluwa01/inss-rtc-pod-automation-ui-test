@@ -1,5 +1,5 @@
 @Regression
-Feature: Letter of invitation received and vote POD
+Feature: Complete POD - Letter of invitation received and vote
 
   Background: Access to INSS Service
     Given I have access to INSS service

@@ -17,7 +17,7 @@ public class LandingPage extends BasePage {
     //Before you start
     public LandingPage() {
         PageFactory.initElements(driver, this);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(2000));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
     @CacheLookup

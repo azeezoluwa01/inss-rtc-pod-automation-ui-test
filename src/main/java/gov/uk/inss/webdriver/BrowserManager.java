@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.time.Duration;
 
 public class BrowserManager extends BasePage {
-    private static final int TIMEOUT = 10;
+    private static final int TIMEOUT = 5;
     protected static final Logger LOGGER = LoggerFactory.getLogger("BrowserManager.class");
     public ChromeOptions chromeOptions;
     BrowserEnum browserEnum = BrowserEnum.valueOf(browserName.toUpperCase());
