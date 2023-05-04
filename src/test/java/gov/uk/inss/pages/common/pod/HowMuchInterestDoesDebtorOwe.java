@@ -27,8 +27,8 @@ public class HowMuchInterestDoesDebtorOwe extends BasePage {
     private WebElement enterAmountInPounds;
 
     @CacheLookup
-    @FindBy(how = How.XPATH, using = "")
-    private WebElement b;
+    @FindBy(how = How.XPATH, using = "//button[contains(text(),'Continue')]")
+    private WebElement continueButton;
 
     public String getPageHeader() {
         wait.until(ExpectedConditions.visibilityOf(pageHeader));
@@ -37,6 +37,10 @@ public class HowMuchInterestDoesDebtorOwe extends BasePage {
 
     public void enterAmountInPounds(){
         enterAmountInPounds.sendKeys(properties.getProperty("amountOwed"));
+    }
+
+    public void clickContinueButton(){
+        continueButton.click();
     }
 
 }

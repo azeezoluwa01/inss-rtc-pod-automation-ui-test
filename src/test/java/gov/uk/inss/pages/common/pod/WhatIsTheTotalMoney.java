@@ -28,6 +28,10 @@ public class WhatIsTheTotalMoney extends BasePage {
     @FindBy(how = How.ID, using = "debt")
     private WebElement enterAmountInOtherCurrency;
 
+    @CacheLookup
+    @FindBy(how = How.ID, using = "debt")
+    private WebElement continueButton;
+
 
     public void enterAmountInPounds(){
         enterAmountInPounds.sendKeys(properties.getProperty("amountOwed"));

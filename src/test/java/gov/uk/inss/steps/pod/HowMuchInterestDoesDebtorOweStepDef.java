@@ -16,4 +16,9 @@ public class HowMuchInterestDoesDebtorOweStepDef {
     public void iEnterAmountOwedInPoundsOnInterest() {
         howMuchInterestDoesDebtorOwe.enterAmountInPounds();
     }
+
+    @When("I click continue button on how much debtor owe page")
+    public void i_click_continue_button_on_how_much_debtor_owe_page() {
+        howMuchInterestDoesDebtorOwe.clickContinueButton();
+    }
 }

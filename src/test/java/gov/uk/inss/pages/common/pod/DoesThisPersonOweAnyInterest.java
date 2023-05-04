@@ -25,9 +25,9 @@ public class DoesThisPersonOweAnyInterest extends BasePage {
     @FindBy(how = How.ID, using = "interest-2")
     private WebElement no;
 
-//    @CacheLookup
-//    @FindBy(how = How.CLASS_NAME, using = "govuk-label govuk-label--l")
-//    public WebElement header3;
+    @CacheLookup
+    @FindBy(how = How.XPATH, using = "//button[contains(text(),'Continue')]")
+    public WebElement continueButton;
 
     public void clickYes() {
         yes.click();
@@ -43,6 +43,10 @@ public class DoesThisPersonOweAnyInterest extends BasePage {
         } else if (interest.equalsIgnoreCase("no")) {
             clickNo();
         } else throw new RuntimeException("You must answer yes or no to POD interest owed question");
+    }
+
+    public void clickContinueButton(){
+        continueButton.click();
     }
 
 
